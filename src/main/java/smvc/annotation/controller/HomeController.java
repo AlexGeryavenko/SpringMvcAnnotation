@@ -7,10 +7,18 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomeController {
 	
-	@RequestMapping("/")
-	public ModelAndView helloPage() {
-		ModelAndView mav = new ModelAndView("HelloPage");
-		mav.addObject("welcomeMessage", "Welcome message from -> handleRequestInternal(). Test.");
+	@RequestMapping("/first")
+	public ModelAndView first() {
+		ModelAndView mav = new ModelAndView("first");
+		mav.addObject("welcomeMessage", "First message. Test.");
+		
+		return mav;
+	}
+	
+	@RequestMapping("/second")
+	public ModelAndView second() {
+		ModelAndView mav = new ModelAndView("second");
+		mav.addObject("welcomeMessage", "Second message. Test.");
 		
 		return mav;
 	}
